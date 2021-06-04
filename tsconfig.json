@@ -16,9 +16,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-    "lib": ["dom", "esnext"]
+    "jsx": "react-jsx",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src/"],
-  "exclude": ["./src/**/*.test.js", "node_modules", "**/node_modules"]
+  "include": [
+    "./src/"
+  ],
+  "exclude": [
+    "./src/**/*.test.js",
+    "node_modules",
+    "**/node_modules"
+  ]
 }
