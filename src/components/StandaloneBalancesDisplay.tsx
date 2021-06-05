@@ -19,10 +19,10 @@ import { notify } from '../utils/notifications';
 import { Balances } from '../utils/types';
 import StandaloneTokenAccountsSelect from './StandaloneTokenAccountSelect';
 import LinkAddress from './LinkAddress';
-import { InfoCircleOutlined } from '@ant-design/icons';
-import { useInterval } from '../utils/useInterval';
-import { useLocalStorageState } from '../utils/utils';
-import { AUTO_SETTLE_DISABLED_OVERRIDE } from '../utils/preferences';
+import {InfoCircleOutlined} from '@ant-design/icons';
+import {useInterval} from "../utils/useInterval";
+import {useLocalStorageState} from "../utils/utils";
+import { AUTO_SETTLE_DISABLED_OVERRIDE } from "../utils/preferences";
 
 const RowBox = styled(Row)`
   padding-bottom: 20px;
@@ -119,15 +119,7 @@ export default function StandaloneBalancesDisplay() {
 
   useInterval(() => {
     const autoSettle = async () => {
-      if (
-        AUTO_SETTLE_DISABLED_OVERRIDE ||
-        !wallet ||
-        !market ||
-        !openOrdersAccount ||
-        !baseCurrencyAccount ||
-        !quoteCurrencyAccount ||
-        !autoSettleEnabled
-      ) {
+      if (AUTO_SETTLE_DISABLED_OVERRIDE || !wallet || !market || !openOrdersAccount || !baseCurrencyAccount || !quoteCurrencyAccount || !autoSettleEnabled) {
         return;
       }
       if (

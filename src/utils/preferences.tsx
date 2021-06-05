@@ -1,13 +1,18 @@
-import React, { useContext, useState } from 'react';
-import { sleep, useLocalStorageState } from './utils';
-import { useInterval } from './useInterval';
-import { useConnection } from './connection';
-import { useWallet } from './wallet';
-import { useMarketInfos, useTokenAccounts } from './markets';
-import { settleAllFunds } from './send';
-import { PreferencesContextValues } from './types';
-import { Market } from '@project-serum/serum';
+import React, {useContext, useState} from 'react';
+import {sleep, useLocalStorageState} from './utils';
+import {useInterval} from './useInterval';
+import {useConnection} from './connection';
+import {useWallet} from './wallet';
+import {
+  useMarketInfos,
+  useTokenAccounts,
+} from './markets';
+import {settleAllFunds} from './send';
+import {PreferencesContextValues} from './types';
+import {Market} from "@project-serum/serum";
+
 export const AUTO_SETTLE_DISABLED_OVERRIDE = true;
+
 const PreferencesContext = React.createContext<PreferencesContextValues | null>(
   null,
 );
@@ -36,6 +41,9 @@ export function PreferencesProvider({ children }) {
       return;
     }
     const autoSettle = async () => {
+			if (AUTO_SETTLE_DISABLED_OVERRIDE) {
+				return;
+			}
       if (!wallet) {
         return;
       }
