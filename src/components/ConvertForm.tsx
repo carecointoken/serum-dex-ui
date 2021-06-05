@@ -182,9 +182,8 @@ function ConvertFormSubmit({
   const balances = useBalances();
   const [fromAmount, setFromAmount] = useState<number | undefined>();
   const [toAmount, setToAmount] = useState<number | undefined>();
-  const {
-    storedFeeDiscountKey: feeDiscountKey,
-  } = useLocallyStoredFeeDiscountKey();
+  const { storedFeeDiscountKey: feeDiscountKey } =
+    useLocallyStoredFeeDiscountKey();
 
   const connection = useConnection();
   const sendConnection = useSendConnection();
