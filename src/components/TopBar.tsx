@@ -48,6 +48,7 @@ const EXTERNAL_LINKS = {
   '/explorer': 'https://explorer.solana.com',
   '/srm-faq': 'https://projectserum.com/srm-faq',
   '/home': 'https://kermitfinance.com/',
+  '/nft':"https://nft.kermit.exchange/"
 };
 
 export default function TopBar() {
@@ -193,6 +194,15 @@ export default function TopBar() {
             marginRight: '20px',
           }}
         >
+           <Menu.Item key="/nft" style={{ margin: '0 10px' }}>
+            <a
+              href={EXTERNAL_LINKS['/nft']}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NFT Platform
+            </a>
+          </Menu.Item>
           <Menu.Item key="/home" style={{ margin: '0 10px' }}>
             <a
               href={EXTERNAL_LINKS['/home']}
