@@ -149,6 +149,12 @@
     "address": "88HrMUm3RtXGF2F4Ftnb7P9Fdh2yz9qfmAgp7jh2CFs9",
     "deprecated": false,
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+  },
+  {
+    "name": "TGT/USDC",
+    "address": "GfokD5aka4n8kqCgRiJtMYi4Xd1ZLBatkynxFGyKdNTc",
+    "deprecated": false,
+    "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   }
 ]
 
