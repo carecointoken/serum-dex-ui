@@ -27,6 +27,7 @@ export interface ChartContainerProps {
   studiesOverrides: ChartingLibraryWidgetOptions['studies_overrides'];
   containerId: ChartingLibraryWidgetOptions['container_id'];
   theme: string;
+  pricescale:number
 }
 
 export interface ChartContainerState {}
@@ -43,6 +44,7 @@ export const TVChartContainer = () => {
     fullscreen: false,
     autosize: true,
     studiesOverrides: {},
+    pricescale:1000000
   };
 
   const tvWidgetRef = React.useRef<IChartingLibraryWidget | null>(null);
