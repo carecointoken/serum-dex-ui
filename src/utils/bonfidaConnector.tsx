@@ -1,7 +1,7 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  static URL: string = 'https://kermit-api.herokuapp.com/tv';
+  static URL: string = 'https://kermit-api.herokuapp.com/';
 
   static async get(path: string) {
     try {
