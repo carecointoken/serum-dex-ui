@@ -1,7 +1,7 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  static URL: string = 'https://kermit-api.herokuapp.com/';
+  static URL: string = 'https://dry-ravine-67635.herokuapp.com/';
 
   static async get(path: string) {
     try {
@@ -23,4 +23,4 @@ export default class BonfidaApi {
   }
 }
 
-export const BONFIDA_DATA_FEED = 'https://kermit-api.herokuapp.com/tv';
+export const BONFIDA_DATA_FEED = 'https://dry-ravine-67635.herokuapp.com/';
