@@ -289,7 +289,7 @@ export function MarketProvider({ marketAddress, setMarketAddress, children }) {
 
 export function getTradePageUrl(marketAddress?: string) {
   if (!marketAddress) {
-    marketAddress = 'Ep5kFPdPFvBqxp7Hp9C8WhMJPPidcC1FXXiKAgCfK6vy';
+    marketAddress = 'EmyoFKQQyALv7mMDL681vV5oanPsLhFggvgJh5gE29vn';
   }
   return `/market/${marketAddress}`;
 }
