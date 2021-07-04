@@ -28,7 +28,7 @@ To add your coin to Kermit Dex you will need to edit three files-
 			"address": "your market address",
 			"deprecated": false,
 			"programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
-			}
+		  }
 		]	
 	``` 
 3. [index.ts](https://github.com/KermitSwap/serum-history/blob/main/src/index.ts)
