@@ -4,6 +4,7 @@ For getting your token listed with a chart on the KermitX API, there is a one ti
 To add your coin to Kermit Dex you will need to edit three files-
 
  1. [token-mints.json](https://github.com/KermitSwap/serum-dex-ui/blob/master/src/token-mints.json)
+	 
 	 After the last entry, add your own coin using this format
 	 ```json
 	   ...
@@ -15,6 +16,7 @@ To add your coin to Kermit Dex you will need to edit three files-
 	]	
 	```
 2. [markets.json](https://github.com/KermitSwap/serum-dex-ui/blob/master/src/markets.json)
+		 
 		 After the last entry, add your own coin using this format
 	```json
 		   ...
@@ -28,6 +30,7 @@ To add your coin to Kermit Dex you will need to edit three files-
 		]	
 	``` 
 3. [index.ts](https://github.com/KermitSwap/serum-history/blob/main/src/index.ts)
+		 
 		 Search for `const  nativeMarketsV3:` in the file. Add your coin at the end of the list.
 	```json
 	"NINJA/USDC":"88HrMUm3RtXGF2F4Ftnb7P9Fdh2yz9qfmAgp7jh2CFs9",
