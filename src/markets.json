@@ -2,7 +2,13 @@
   {
     "address": "Ep5kFPdPFvBqxp7Hp9C8WhMJPPidcC1FXXiKAgCfK6vy",
     "deprecated": false,
-    "name": "KERMIT/USDC",
+    "name": "KERMIT/USDC (Old)",
+    "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+  },
+  {
+    "address": "EmyoFKQQyALv7mMDL681vV5oanPsLhFggvgJh5gE29vn",
+    "deprecated": false,
+    "name": "KERMIT/USDC (New)",
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   },
   {
@@ -133,7 +139,7 @@
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   },
   {
-    "name": "SLIM/USDC",
+    "name": "SLIM/SOL",
     "address": "GekRdc4eD9qnfPTjUMK5NdQDho8D9ByGrtnqhMNCTm36",
     "deprecated": false,
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
@@ -146,7 +152,7 @@
   },
   {
     "name": "NINJA/USDC",
-    "address": "88HrMUm3RtXGF2F4Ftnb7P9Fdh2yz9qfmAgp7jh2CFs9",
+    "address": "J4oPt5Q3FYxrznkXLkbosAWrJ4rZLqJpGqz7vZUL4eMM",
     "deprecated": false,
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
   },
