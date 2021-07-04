@@ -17,7 +17,7 @@ To add your coin to Kermit Dex you will need to edit three files-
 	```
 2. [markets.json](https://github.com/KermitSwap/serum-dex-ui/blob/master/src/markets.json)
 		 
-		 After the last entry, add your own coin using this format
+After the last entry, add your own coin using this format
 	```json
 		   ...
 		   ,
@@ -31,7 +31,7 @@ To add your coin to Kermit Dex you will need to edit three files-
 	``` 
 3. [index.ts](https://github.com/KermitSwap/serum-history/blob/main/src/index.ts)
 		 
-		 Search for `const  nativeMarketsV3:` in the file. Add your coin at the end of the list.
+Search for `const  nativeMarketsV3:` in the file. Add your coin at the end of the list.
 	```json
 	"NINJA/USDC":"88HrMUm3RtXGF2F4Ftnb7P9Fdh2yz9qfmAgp7jh2CFs9",
 	"TGT/USDC":"GfokD5aka4n8kqCgRiJtMYi4Xd1ZLBatkynxFGyKdNTc",
