@@ -2,6 +2,44 @@
 
 An implementation of a UI for the Serum DEX.
 
+## Adding your coin to Kermit DEX
+For getting your token listed with a chart on the KermitX API, there is a one time fee of **1000 KERMIT tokens**.
+
+To add your coin to Kermit Dex you will need to edit three files-
+
+ 1. [token-mints.json](https://github.com/KermitSwap/serum-dex-ui/blob/master/src/token-mints.json)
+	 After the last entry, add your own coin using this format
+	 ```json
+	   ...
+	   ,
+	   {
+		"address":  "your token mint address",
+		"name": " your ticker"
+		}
+	]	
+	```
+2. [markets.json](https://github.com/KermitSwap/serum-dex-ui/blob/master/src/markets.json)
+		 After the last entry, add your own coin using this format
+	```json
+		   ...
+		   ,
+		  {
+			"name": "your ticker/your stable coin pair",
+			"address": "your market address",
+			"deprecated": false,
+			"programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
+			}
+		]	
+	``` 
+3. [index.ts](https://github.com/KermitSwap/serum-history/blob/main/src/index.ts)
+		 Search for `const  nativeMarketsV3:` in the file. Add your coin at the end of the list.
+	```json
+	"NINJA/USDC":"88HrMUm3RtXGF2F4Ftnb7P9Fdh2yz9qfmAgp7jh2CFs9",
+	"TGT/USDC":"GfokD5aka4n8kqCgRiJtMYi4Xd1ZLBatkynxFGyKdNTc",
+	"your ticker/your stable coin pair": "your market address",
+	``` 
+After doing the steps above, fill this [form](https://forms.gle/9Xz99nXNdLc5xfUA6).
+
 ### Running the UI
 
 Run `yarn` to install dependencies, then run `yarn start` to start a development server or `yarn build` to create a production build that can be served by a static file server.
@@ -15,36 +53,6 @@ To do so, set the `REACT_APP_USDT_REFERRAL_FEES_ADDRESS` and `REACT_APP_USDC_REF
 You may want to put these in local environment files (e.g. `.env.development.local`, `.env.production.local`). See the [documentation](https://create-react-app.dev/docs/adding-custom-environment-variables) on environment variables for more information.
 
 NOTE: remember to re-build your app before deploying for your referral addresses to be reflected.
-
-### Add Trading View charts
-
-It is possible to add OHLCV candles built from on chain data using [Bonfida's API](https://docs.bonfida.com). Here is how to do it:
-
-1. Get access to the [TradingView Charting Library](https://github.com/tradingview/charting_library/) repository. This is a **private repository** and it will **return a 404 if you don't have access to it**. To get access to the repository please refer to [TradingView's website](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/)
-
-2. Once you have access to the Charting Library repository:
-
-- Copy `charting_library` folder from https://github.com/tradingview/charting_library/ to `/public` and to `/src` folders.
-- Copy `datafeeds` folder from https://github.com/tradingview/charting_library/ to `/public`.
-
-3. Import `TVChartContainer` from `/src/components/TradingView` and add it to your `TradePage.tsx`. The TradingView widget will work out of the box using [Bonfida's](https://bonfida.com) datafeed.
-
-4. Remove the following from the `tsconfig.json`
-
-```json
-"./src/components/TradingView/index.tsx"
-```
-
-5. Uncomment the following in `public/index.html`
-
-```
-<script src="%PUBLIC_URL%/datafeeds/udf/dist/polyfills.js"></script>
-<script src="%PUBLIC_URL%/datafeeds/udf/dist/bundle.js">
-```
-
-<p align="center">
-<img height="300" src="https://i.imgur.com/UyFKmTv.png">
-</p>
 
 ---
 
