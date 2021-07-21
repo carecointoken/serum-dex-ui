@@ -1,7 +1,7 @@
 import { BonfidaTrade } from './types';
 
 export default class BonfidaApi {
-  static URL: string = 'https://kermit-api.herokuapp.com/';
+  static URL: string = 'https://api.dexlab.space/v1/';
 
   static async get(path: string) {
     try {
@@ -19,8 +19,8 @@ export default class BonfidaApi {
   static async getRecentTrades(
     marketAddress: string,
   ): Promise<BonfidaTrade[] | null> {
-    return BonfidaApi.get(`trades/address/${marketAddress}`);
+    return BonfidaApi.get(`trade-history/${marketAddress}`);
   }
 }
 
-export const BONFIDA_DATA_FEED = 'https://kermit-api.herokuapp.com/tv';
+export const BONFIDA_DATA_FEED = 'https://api.dexlab.space/v1/trade-history/tv';
