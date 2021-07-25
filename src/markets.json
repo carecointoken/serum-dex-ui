@@ -185,5 +185,10 @@
     "address": "85CTDt8gNfJhmqE3Xm2smDm54HmeT1jvLfPVBTkX8BTX",
     "deprecated": false,
     "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin" 
-  }
+  },
+  {  "name": "CRC/USDC",
+    "address": "28UzKVL5kwzPA9xdLFYJRManeY6RHgmTiU5K1h13XCRv",
+    "deprecated": false,
+    "programId": "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin
+    
 ]
